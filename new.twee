@@ -1,0 +1,1003 @@
+:: StoryTitle
+new
+
+
+:: StoryData
+{
+  "ifid": "AB643D8E-DF43-48F7-AE50-972404723FE3",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Untitled Passage",
+  "zoom": 1
+}
+
+
+:: 3CStore {"position":"650,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $Product to $Product + 1)
+3C店里有很多不同品牌的笔电和平板。
+良介看了价格和规格，
+发现每一台好像都不一样。
+
+他开始有点不知道该怎么选。
+
+[[先冷静一下->MidChoice]]
+
+
+:: AlwaysConfirm {"position":"2175,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $WorkCulture to $WorkCulture + 1)
+良介一直问：「这一台真的能传真吗？老板一定会用吗？」
+
+店员虽然有点累，但还是认真回答。
+
+良介觉得自己很小心。
+
+[[继续比较->Highlight3]]
+
+
+:: AnotherDay {"position":"1600,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $SaveMoney to $SaveMoney + 1)
+良介问：「我可以改天再来修吗？」
+
+店员说：「可以，不过今天有打折，改天来就没有了。」
+
+良介开始犹豫。
+
+[[考虑要不要现在修->HightLight2]]
+
+
+:: AskBoss {"position":"2125,1250","size":"100,100"}
+(display:"UI-Nav")
+(set: $FaxMachine to $FaxMachine + 1)
+
+良介回到公司询问老板需要的传真机类型，老板列出几项他需要的功能后，良介回到商店继续购买。
+
+[[查看结果->CheakEnding3]] 
+
+
+:: AskClerk {"position":"925,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $Product to $Product + 1)
+店员：大多数的上班族出差的时候，需要随时处理公司的事情，所以他们喜欢买平板。
+
+[[所以你的意思是，带着笔电出门会很麻烦，不如买平板？->AskClerk1]]
+[[可以帮我比较一下笔电和平板吗？->AskClerk2]]
+[[我再看看就好，谢谢->AskClerk3]]
+
+
+:: AskClerk1 {"position":"800,1125","size":"100,100"}
+(display:"UI-Nav")
+店员：如果只是看资料，平板很方便，
+但如果要打报告、做简报，平板还是不如笔电方便。
+
+[[继续听店员说明->AskClerkReply]]
+
+
+:: AskClerk2 {"position":"925,1125","size":"100,100"}
+(display:"UI-Nav")
+店员：笔电功能比较完整，平板比较轻。
+如果你常常带出门，可以考虑重量和电池。
+
+[[我知道了->AskClerkReply]]
+
+
+:: AskClerk3 {"position":"1050,1125","size":"100,100"}
+(display:"UI-Nav")
+好的，如果有需要再问我。
+
+[[再想一想->AskClerkReply]]
+
+
+:: AskClerkReply {"position":"900,1250","size":"100,100"}
+(display:"UI-Nav")
+店员很亲切，用简单的中文说明不同笔电及平板的功能及价格的差别。
+
+良介觉得问店员很有帮助。
+
+[[做出最后的决定。->HightLight]]
+
+
+:: AskFriend {"position":"1600,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $Q to $Q + 1)
+(set: $Letterofguarantee to $Letterofguarantee + 1)
+良介传信息问朋友他的手機手機不能充電該去哪一家比較好。
+
+朋友回他说：「那家店虽然不便宜，但修理后会给保证书。」
+
+良介觉得这个信息很重要。
+
+[[决定前往修理店->MidChoice2]]
+
+
+:: AskTanaka {"position":"550,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $Tanaka to $Tanaka + 1)
+田中：我觉得可以买笔电，虽然平板比笔电轻，但需要做报告时，平常放在背包里不管去哪都很方便。
+
+[[平板呢？平板感觉也方便->AskTanaka1]]
+[[我想要买笔电，可以请你帮我挑吗？->AskTanaka2]]
+[[我再考虑一下->AskTanaka3]]
+
+
+:: AskTanaka1 {"position":"425,1125","size":"100,100"}
+(display:"UI-Nav")
+田中：平板真的比较轻，但是功能不如笔电完整。
+如果要写报告、做简报，我还是比较推荐笔电。
+
+[[做出最后的决定->HightLight]]
+
+
+:: AskTanaka2 {"position":"550,1125","size":"100,100"}
+(display:"UI-Nav")
+田中：学生用的话，我建议你选一台性能正常、电池耐用的就好，不用买太贵的。
+
+[[做出最后的决定->HightLight]]
+
+
+:: AskTanaka3 {"position":"675,1125","size":"100,100"}
+(display:"UI-Nav")
+田中：没关系，买电脑本来就要多想一下。
+慢慢选比较不会后悔。
+[[再听听其他意见->AskTanakaReply]]
+
+
+:: AskTanakaReply {"position":"550,1250","size":"100,100"}
+(display:"UI-Nav")
+田中认真听良介的需求，也分享自己用笔电的经验。
+
+良介觉得田中的建议很实用。
+
+[[做出最后的决定。->HightLight]]
+
+
+:: BeforeGoOut {"position":"2000,625","size":"100,100"}
+(display:"UI-Nav")
+良介准备出门前，可以先做一件事：
+
+[[上网查传真机的功能->MachineFunction]]
+[[问同事传真机是做什么用的->Effect]]
+[[直接去卖场看看->MachineStore]]
+
+
+:: Cafes {"position":"825,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $Tanaka to $Tanaka + 1)
+咖啡厅里很安静，
+良介和田中一边喝咖啡一边聊天。
+良介觉得和田中的距离变近了一点。
+
+[[聊天后，准备前往3C店->MidChoice]]
+
+
+:: CheakEnding2 {"position":"1450,1250","size":"100,100"}
+(if: $Letterofguarantee >= 2 and $Letterofguarantee >= $Q and $Letterofguarantee >= $SaveMoney)[(goto: "EndingLetterofguarantee")]
+(else-if: $Q > $SaveMoney and $Q >= 2)[(goto: "EndingQ")]
+(else-if: $SaveMoney > $Q and $SaveMoney >= 2)[(goto: "EndingSaveMoney")]
+
+
+:: CheakEnding3 {"position":"2000,1375","size":"100,100"}
+(if: $WorkCulture >= 2 and $WorkCulture >= $NoMistakes and $WorkCulture >= $FaxMachine)[(goto: "EndingWorkCulture")]
+(else-if: $NoMistakes > $FaxMachine and $NoMistakes >= 2)[(goto: "EndingNoMistakes")]
+(else-if: $FaxMachine > $NoMistakes and $FaxMachine >= 2)[(goto: "EndingFaxMachine")]
+
+
+:: CheckEnding {"position":"550,1500","size":"100,100"}
+(if: $culture >= 2 and $culture >= $Tanaka and $culture >= $Product)[(goto: "EndingCulture")]
+(else-if: $Tanaka > $Product and $Tanaka >= 2)[(goto: "EndingTanaka")]
+(else-if: $Product > $Tanaka and $Product >= 2)[(goto: "EndingProduct")]
+
+
+
+:: CheckPrice {"position":"1300,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $SaveMoney to $SaveMoney + 1)
+良介坐在咖啡厅，用手机上网查修理不能充電的手機价格。
+他发现不同店的价钱差很多，有的价格大约一千元，有的却超过两千元。
+
+良介心想：「如果不先查清楚，恐怕会被乱收钱。」
+
+[[决定前往修理店->MidChoice2]]
+
+
+:: Discounts {"position":"1450,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $SaveMoney to $SaveMoney + 1)
+(set: $Letterofguarantee to $Letterofguarantee + 1)
+良介在商场看到一家手机配件店，门口贴着「修理打折中」的海报。
+
+他有点心动，但也担心打折的修理会不会没有保证。
+
+[[决定前往修理店->MidChoice2]]
+
+
+:: Effect {"position":"2000,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $WorkCulture to $WorkCulture + 1)
+良介问同事：「传真机平常怎么用？」
+
+同事说：「有些公司觉得传真比较正式，也比较安心。」
+
+良介觉得这是台湾职场很特别的地方。
+
+[[前往卖场->MidChoice3]]
+
+
+:: EndingCulture {"position":"125,525","size":"100,100"}
+(display: "TaskResult")
+(text-colour:green)[【良介了解到更多台湾文化结局】]
+逛完商店，两个人站在出口前。
+
+良介说：「今天学到好多台湾的文化！真的很开心！」
+
+田中点头：「下次我们还可以一起去别的地方，你会看到不一样的文化。」
+
+良介觉得很高兴，
+因为他今天不只是来买东西，也学到很多关于台湾的事情。
+(display: "Score")''Bold Text''
+
+
+:: EndingFaxMachine {"position":"2400,525","size":"100,100"}
+(display: "TaskResult3")
+(text-colour:green)[【买到老板能够用的传真机】]
+在回公司的路上，良介心想：「幸好我有先回公司，问一下老板需要什么功能的传真机！不然我真的不知道该怎么选择。」
+
+良介：「下次有类似的事情时，我一定会先问清楚需求，再出发！」
+(display: "Score3")
+
+
+:: EndingLetterofguarantee {"position":"1050,475","size":"100,100"}
+(display: "TaskResult2")
+(text-colour:green)[【确定修理有没有保证】]
+修好后，店员给了良介一张保证书。
+良介拿着手机和保证书走出店门，心里感到很踏实。
+
+他想起之前看到的新闻，知道自己今天做了正确的决定。
+「如果手机再坏，也不用太担心。」良介心里默默说。
+
+今天他学到：小心查明保证真的很重要。
+(display: "Score２")
+
+
+:: EndingNoMistakes {"position":"2400,650","size":"100,100"}
+(display: "TaskResult3")
+(text-colour:green)[【不买错、不要超过预算】]
+良介在回公司的路上时心想：「对我这种刚进公司的新人来说，第一次买东西不出错已经很厉害了！经过这次，下次有新的任务时我一定会变得更加厉害！」
+
+良介在心里大声地对自己说一声：加油！！！！
+(display: "Score3")
+
+
+:: EndingProduct {"position":"125,650","size":"100,100"}
+(display: "TaskResult")
+(text-colour:green)[【买到最划算的产品结局】]
+良介和田中一起走回捷运站。
+
+良介跟田中说：幸好今天有店员帮我介绍，
+不然我就买不到在预算内的产品了！
+
+田中点头：没错！下次有需要别的产品也可以去找他，
+感觉他是个很认真的店员！
+
+良介觉得很高兴，觉得今天过得很充实。
+
+(display: "Score")
+
+
+:: EndingQ {"position":"1050,600","size":"100,100"}
+(display: "TaskResult2")
+(text-colour:green)[【学会说明问题】]
+良介仔细说明手机的状况，店员很快就理解问题所在，并立即开始修理。
+良介坐在旁边，看着店员专业的动作，心里感到安心。
+
+「原来清楚表达问题这么重要！」他暗暗想。
+修理完成后，手机恢复如新，良介觉得今天的学习非常有价值。
+
+他发现：能够用正确的方式说明问题，事情会更顺利。
+(display: "Score２")
+
+
+:: EndingSaveMoney {"position":"1050,725","size":"100,100"}
+(display: "TaskResult2")
+(text-colour:green)[【不要花太多钱】]
+良介仔细比较价格，选择了一家正在打折的店修理手机，
+修理费用没有超过预算，他感到非常高兴。
+
+良介拿着修好的手机走出店门，心里暗暗计算着今天的开销，觉得自己很会精打细算。
+「看来用心比较价格真的很有用！」
+
+他觉得今天既省钱，又安心。
+(display: "Score２")
+
+
+:: EndingTanaka {"position":"125,400","size":"100,100"}
+(display: "TaskResult")
+(text-colour:green)[【跟田中更亲近的结局】]
+笔电买完了，两个人一起走向捷运站。
+
+两人有点累，但都在笑。
+他们聊今天最好吃的东西、最好笑的画面，
+也聊以后还想去哪里。
+
+良介觉得：
+可以跟朋友一起度过这样的晚上，非常开心的事！
+(display: "Score")
+
+
+:: EndingWorkCulture {"position":"2400,400","size":"100,100"}
+(display: "TaskResult3")
+(text-colour:green)[【了解台湾的工作文化】]
+良介在台湾体验到了与日本本不一样的工作文化。
+
+在回家的路上，良介心想：「原来台湾的公司认为使用传真机是一种正式的流程，是尊重对方的。」
+
+良介觉得：可以在台湾直接学习到不一样的文化，真的是一件非常开心的事情！
+(display: "Score3")
+
+
+:: FaxMachine {"position":"2000,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "FaxMachine")       <!-- 新增 -->
+(set: $FaxMachine to $FaxMachine + 1)
+良介心想：「最重要的是老板能够用，功能一定不能买错。」
+
+[[准备出门->BeforeGoOut]]
+
+
+:: GoTo6Gate {"position":"1450,625","size":"100,100"}
+(display:"UI-Nav")
+手机店还没开，良介决定先做一件事。
+
+[[去咖啡厅上网查修理价格->CheckPrice]]
+[[去逛商场看看有没有打折活动->Discounts]]
+[[传信息问朋友哪一家修理店比较好->AskFriend]]
+
+
+:: HaveLetterofguarantee {"position":"1300,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $Letterofguarantee to $Letterofguarantee + 1)
+良介问店员：「请问修理后有保证书吗？」
+
+店员回答：「有的，我们会给你三个月的保证。」
+
+良介听了比较安心。
+
+[[考虑要不要现在修->HightLight2]]
+
+
+:: Highlight3 {"position":"2000,1125","size":"100,100"}
+(display:"UI-Nav")
+店员说：「这一台功能很多，但价格比较高；那一台比较简单，大约便宜一半。」
+
+良介必须做出最后的决定。
+
+[[买功能完整的->CheakEnding3]]
+[[买基本款，省钱->CheakEnding3]]
+[[回去再问老板一次->AskBoss]]
+
+
+
+:: HightLight {"position":"550,1375","size":"100,100"}
+(display:"UI-Nav")
+现在，良介必须做出最后的决定。
+
+[[听田中的建议，买他推荐的那一台->CheckEnding]]
+[[听店员的建议，选CP值最高的那一台->CheckEnding]]
+[[觉得还不够清楚，决定再考虑一下->CheckEnding]]
+
+
+:: HightLight2 {"position":"1450,1125","size":"100,100"}
+(display:"UI-Nav")
+现在，良介必须做出最后的决定。
+
+[[选择有保证的修理方式->CheakEnding2]]
+[[只在意价格，选最便宜的方案->CheakEnding2]]
+[[详细确认手机的问题再修->CheakEnding2]]
+
+
+
+:: HowToUse {"position":"1875,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $NoMistakes to $NoMistakes + 1)
+良介问店员：「可以请你教我怎么用传真吗？」
+
+店员耐心说明传真、影印和扫描的方式，还示范给他看。
+
+良介觉得学到很多。
+
+[[继续比较->Highlight3]]
+
+
+:: LookAtThePrice {"position":"2025,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $FaxMachine to $FaxMachine + 1)
+良介看到价格差很多，有的超过预算，有的正在打折。
+
+他心想：「如果买太贵，老板会不会不高兴？」
+
+[[继续比较->Highlight3]]
+
+
+:: MachineFunction {"position":"1875,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $NoMistakes to $NoMistakes + 1)
+良介上网查资料，发现有些传真机可以扫描、影印，甚至接电脑。
+
+他心想：「功能好多，不仔细看一定会买错。」
+
+[[前往卖场->MidChoice3]]
+
+
+:: MachineStore {"position":"2125,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $NoMistakes to $NoMistakes + 1)
+良介没有多想，直接来到卖场，看到一排传真机，有点紧张。
+
+[[寻找店员->MidChoice3]]
+
+
+:: Meet {"position":"650,625","size":"100,100"}
+(display:"UI-Nav")
+良介和田中在捷运站会合，距离买笔电还有一点时间，良介决定想要找个地方逛逛。
+
+他们应该先去哪儿呢？
+
+[[去台湾有名的夜市看看->NightMarket]]
+[[直接去买上学用的电脑->3CStore]]
+[[去咖啡厅跟田中聊天->Cafes]]
+
+
+:: MidChoice {"position":"650,875","size":"100,100"}
+(display:"UI-Nav")
+到了店内，良介不知道要从哪儿开始，觉得有点紧张，他要怎么做呢？
+
+[[询问田中的意见->AskTanaka]]
+[[询问店员的建议->AskClerk]]
+[[观察其他人怎么做->ObserveOtherPeople]]
+
+
+:: MidChoice2 {"position":"1450,875","size":"100,100"}
+(display:"UI-Nav")
+到了修理店后，店员检查手机。
+
+店员说：「这个问题恐怕需要换零件。」
+
+良介要怎么反应？
+
+[[询问修理后有没有保证书->HaveLetterofguarantee]]
+[[说明手机之前明明很好用->Phone]]
+[[问能不能改天再来修->AnotherDay]]
+
+
+:: MidChoice3 {"position":"2000,875","size":"100,100"}
+(display:"UI-Nav")
+在卖场里，店员介绍不同的机器。
+有的可以传真，也可以扫描；有的只有基本功能，但价格比较便宜。
+良介要怎么做？
+
+[[问清楚传真怎么用->HowToUse]]
+[[担心自己买错，一直确认->AlwaysConfirm]]
+[[看价格，怕花费超过预算->LookAtThePrice]]
+
+
+
+:: NightMarket {"position":"475,750","size":"100,100"}
+(display:"UI-Nav")
+(set: $culture to $culture + 1)
+良介觉得，来台湾留学，
+夜市里人很多，也很热闹。
+良介看到很多没看过的小吃，觉得很新鲜。
+田中一边走一边介绍夜市文化，良介听得很开心。
+
+[[逛完后，准备前往3C店->MidChoice]]
+
+
+:: NoMistakes {"position":"2125,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "NoMistakes")       <!-- 新增 -->
+(set: $NoMistakes to $NoMistakes + 1)
+良介心想：「我只是打工生，不能买错，也不能让费用超过预算。」
+
+[[准备出门->BeforeGoOut]]
+
+
+:: ObserveOtherPeople {"position":"300,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $culture to $culture + 1)
+良介站在旁边观察其他客人。有人一直问价格，也有人比较不同品牌。
+
+[[继续观察->ObserveOtherPeople1]]
+
+
+:: ObserveOtherPeople1 {"position":"300,1125","size":"100,100"}
+(display:"UI-Nav")
+良介注意到，大多数台湾人买东西前会一直比较价格，也会问很多问题。
+他觉得这是一种很特别的文化。
+
+[[做出最后的决定->HightLight]]
+
+
+:: Phone {"position":"1450,1000","size":"100,100"}
+(display:"UI-Nav")
+(set: $Q to $Q + 1)
+良介跟店员说：「我的手机之前真的很好用，昨天才突然不能充电。」
+
+店员点点头，表示了解问题的情况。
+
+[[考虑要不要现在修->HightLight2]]
+
+
+:: Score {"position":"300,400","size":"100,100"}
+**今晚的分数总结：**
+
+**了解台湾文化：** (print: $culture)  
+(if: $culture >= 2)[良介没有买到电脑，但认识到很多台湾的文化，觉得这样很好。]\
+(else-if: $culture is 1)[良介没有买到电脑，也只认识一些台湾的文化，但他觉得这样也行。]\
+(else:)[良介没有买到电脑，也没有认识到很多台湾的文化，觉得很难过。]
+
+**田中好感：** (print: $Tanaka)  
+(if: $Tanaka >= 2)[良介发现自己和田中的关系变得更好了。从此两人常常约出去一起玩。]\
+(else-if: $Tanaka is 1)[田中觉得良介人不错，但两人感情没有变得更好。]\
+(else:)[良介发现自己和田中的关系变得更差了。田中不再跟良介联系。]
+
+**买到最划算的产品：** (print: $Product)  
+(if: $Product >= 2)[良介买到最划算的笔记本电脑，觉得很开心！]\
+(else-if: $Product is 1)[良介买到不贵但也没有很便宜的产品，觉得还行。]\
+(else:)[良介没有买到最划算的电脑，觉得很难过。]
+
+---
+
+如果你想看看别的可能，
+可以[[重新开始->Start]]。
+
+
+:: Score3 {"position":"2275,475","size":"100,100"}
+**今晚的分数总结：**
+
+**了解台灣的工作文化** (print: $WorkCulture)  
+(if:$WorkCulture >= 2)[良介了解了更多的台灣工作時的文化，覺得台灣的工作文化真是太有趣了！他下次還想要學！]\
+(else-if: $WorkCulture is 1)[良介只了解到一点点的工作文化，他很希望下次能学到更多。]\
+(else:)[良介没有了解到台湾的工作文化，觉得很难过。]
+
+**買到老闆能用的傳真機：** (print: $FaxMachine)  
+(if: $FaxMachine >= 2)[良介買到老闆最需要的傳真機種類，老闆很開心，因此給良介發了獎金。]\
+(else-if: $FaxMachine is 1)[良介雖然買到了傳真機，但卻不是老闆想要的那種，因此]\
+(else:)[良介沒有買到傳真機。]
+
+**不买错、不要超过预算：** (print: $NoMistakes)  
+(if: $NoMistakes >= 2)[良介买到最划算的笔记本电脑，觉得很开心！]\
+(else-if: $NoMistakes is 1)[良介买到不贵但也没有很便宜的产品，觉得还行。]\
+(else:)[良介没有买到最划算的电脑，觉得很难过。]
+
+---
+
+如果你想看看別的可能，  
+可以[[重新開始->Start3]]。
+
+
+:: Score２ {"position":"1175,475","size":"100,100"}
+**今晚的分数总结：**
+
+**把手機修好：** (print: $Letterofguarantee)  
+(if:$Letterofguarantee >= 2)[良介没有买到电脑，但认识到很多台湾的文化，觉得这样很好。]\
+(else-if: $Letterofguarantee is 1)[良介没有买到电脑，也只认识一些台湾的文化，但他觉得这样也行。]\
+(else:)[良介没有买到电脑，也没有认识到很多台湾的文化，觉得很难过。]
+
+**學會說明問題：** (print: $Q)  
+(if: $Q >= 2)[良介发现自己和田中的关系变得更好了。从此两人常常约出去一起玩。]\
+(else-if: $Q is 1)[田中觉得良介人不错，但两人感情没有变得更好。]\
+(else:)[良介发现自己和田中的关系变得更差了。田中不再跟良介联系。]
+
+**不要花太多錢：** (print: $SaveMoney)  
+(if: $SaveMoney >= 2)[良介买到最划算的笔记本电脑，觉得很开心！]\
+(else-if: $SaveMoney is 1)[良介买到不贵但也没有很便宜的产品，觉得还行。]\
+(else:)[良介没有买到最划算的电脑，觉得很难过。]
+
+---
+
+如果你想看看別的可能，  
+可以[[重新開始->Start2]]。
+
+
+:: Start {"position":"650,375","size":"100,100"}
+(display:"UI-Nav")
+(set: $culture to 0)(set: $Tanaka to 0)(set: $Product to 0)(set: $goal to "")  <!-- 新增：記錄玩家一開始選的目標 -->
+良介是刚来台湾留学的日本学生，个性开朗、喜欢交朋友。
+
+最近，他发现上课常常需要用电脑，所以今天打算去买一台笔电。
+
+不过，他也希望能更了解台湾生活。
+
+你觉得今天良介最重要的目标是什么？
+
+[[了解更多台湾文化->StartGoalCulture]]
+[[跟朋友田中更亲近->StartGoalTanaka]]
+[[买到最划算的电脑->StartGoalProduct]]
+
+
+:: Start2 {"position":"1450,375","size":"100,100"}
+(display:"UI-Nav")
+(set: $Letterofguarantee to 0)(set: $Q to 0)(set: $SaveMoney to 0)(set: $goal to "")  <!-- 新增：記錄玩家一開始選的目標 -->
+良介来台湾半年了，他觉得自己的手机一直都很好用，
+
+但昨天突然不能充电了。他很担心，因为手机里有很多重要的资料，而且修理的费用恐怕会超过他的预算。
+
+良介看到新闻说：「最近有很多外国学生在台湾修手机时被乱收钱。」
+
+他想了一下，今天他最想做到的是什么？
+
+[[确定修理有没有保证->StartGoalLetterofguarantee]]
+[[学会说明问题->StartGoalQ]]
+[[不要花太多钱->StartGoalSaveMoney]]
+
+
+:: Start3 {"position":"2000,375","size":"100,100"}
+(display:"UI-Nav")
+(set: $WorkCulture to 0)(set: $FaxMachine to 0)(set: $NoMistakes to 0)(set: $goal to "")  <!-- 新增：記錄玩家一開始選的目標 -->
+良介在校外打工，老板请他帮忙买一台传真机。
+
+他很惊讶，因为在日本，他几乎没看过有人用传真机。
+
+他心想：「真的还有人在用吗？如果买错了，怎么办？」
+
+当天早上，良介看到一则新闻：「台湾部分公司仍使用传真处理文件。」
+
+他突然明白，这可能和工作文化有关。
+
+今天，他应该最先完成哪一个目标？
+
+[[了解台湾的工作文化->WorkCulture]]
+[[买到老板需要的传真机->FaxMachine]]
+[[不买错、不要超过预算->NoMistakes]]
+
+
+
+:: StartGoalCulture {"position":"500,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "culture")       <!-- 新增 -->
+(set: $culture to $culture + 1)
+良介觉得，来台湾留学，
+不只是上课，了解文化也很重要。
+他决定先出门走走看看。
+
+[[到捷运站1号门出口->Meet]]
+
+
+:: StartGoalLetterofguarantee {"position":"1300,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "Letterofguarantee")       <!-- 新增 -->
+(set: $Letterofguarantee to $Letterofguarantee + 1)
+良介心想：「有保证的话，修理手机就方便多了！」
+
+[[到捷运站6号出口->GoTo6Gate]]
+
+
+:: StartGoalProduct {"position":"800,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "Product")       <!-- 新增 -->
+(set: $Product to $Product + 1)
+良介心想：「我的钱不多，一定要买到最划算的电脑！」
+
+[[到捷运站1号门出口->Meet]]
+
+
+:: StartGoalQ {"position":"1450,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "Q")       <!-- 新增 -->
+(set: $Q to $Q + 1)
+良介心想：「一定要好好说明自己的手机有什么问题！」
+
+[[到捷运站6号出口->GoTo6Gate]]
+
+
+:: StartGoalSaveMoney {"position":"1600,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "SaveMoney")       <!-- 新增 -->
+(set: $SaveMoney to $SaveMoney + 1)
+良介心想：「一定要小心！不能被乱收钱！」
+
+[[到捷运站6号出口->GoTo6Gate]]
+
+
+:: StartGoalTanaka {"position":"650,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "Tanaka")       <!-- 新增 -->
+(set: $Tanaka to $Tanaka + 1)
+良介想和田中变得更熟，所以决定今天多向田中问问题。
+
+[[到捷运站1号门出口->Meet]]
+
+
+:: TaskResult {"position":"300,525","size":"100,100"}
+(text-colour:orange)[**任务结果：**]
+
+(if: $goal is "culture")[
+你一开始的目标是：**(text-colour:magenta)[了解更多台湾文化]**。\
+(if: $culture > $Tanaka and $culture > $Product)[最后文化分是三个里面最高，**(text-colour:magenta)[任务成功*]*。]\
+(else:)[最后文化分不是最高，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "Tanaka")[
+你一开始的目标是：**(text-colour:magenta)[跟朋友田中更亲近]**。\
+(if: $Tanaka > $culture and $Tanaka > $Product)[最后田中好感很高，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后田中好感不是很高，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "Product")[
+你一开始的目标是：**(text-colour:magenta)[买到最划算的电脑]**。\
+(if: $Product > $culture and $Product > $Tanaka)[最后买到最划算的电脑，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后沒有买到最划算的电脑，**(text-colour:red)[任务失败]**。]
+]
+
+
+:: TaskResult2 {"position":"1175,600","size":"100,100"}
+(text-colour:orange)[**任务结果：**]
+
+(if: $goal is "Letterofguarantee")[
+你一开始的目标是：**(text-colour:magenta)[确定修理有没有保证]**。\
+(if: $Letterofguarantee > $Q and $Letterofguarantee > $SaveMoney)[最后确定修理有保证，**(text-colour:magenta)[任务成功*]*。]\
+(else:)[最后确定修理没有保证，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "Q")[
+你一开始的目标是：**(text-colour:magenta)[学会说明问题]**。\
+(if: $Q > $Letterofguarantee and $Q > $SaveMoney)[最后清楚描述了问题，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后沒有清楚描述了问题，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "SaveMoney")[
+你一开始的目标是：**(text-colour:magenta)[不要花太多钱]**。\
+(if: $SaveMoney > $Letterofguarantee and $SaveMoney > $Q)[最后沒有花太多钱，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后花太多钱，**(text-colour:red)[任务失败]**。]
+]
+
+
+:: TaskResult3 {"position":"2275,600","size":"100,100"}
+(text-colour:orange)[**任务结果：**]
+
+(if: $goal is "WorkCulture")[
+你一开始的目标是：**(text-colour:magenta)[了解台湾的工作文化]**。\
+(if: $WorkCulture > $FaxMachine and $WorkCulture > $NoMistakes)[最后文化分是三個裡面最高，**(text-colour:magenta)[任务成功*]*。]\
+(else:)[最后文化分不是最高，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "FaxMachine")[
+你一开始的目标是：**(text-colour:magenta)[买到老板需要的传真机]**。\
+(if: $FaxMachine > $WorkCulture and $FaxMachine > $NoMistakes)[最后买到老板需要的传真机，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后沒有买到老板需要的传真机，**(text-colour:red)[任务失败]**。]
+]
+
+(if: $goal is "NoMistakes")[
+你一开始的目标是：**(text-colour:magenta)[不买错、不要超过预算]**。\
+(if: $NoMistakes > $WorkCulture and $NoMistakes > $FaxMachine)[最后沒有买错、沒有超过预算，**(text-colour:magenta)[任务成功]**。]\
+(else:)[最后买错、超过预算，**(text-colour:red)[任务失败]**。]
+]
+
+
+:: UI-Nav {"position":"825,0","size":"100,100"}
+<div class="navbar">(link: "课程目标")[(goto:"课程目标")] • (link: "游戏首页")[(goto:"游戏首页")]• (link: "认识生词")[(goto:"生词教学")] • (link:"生词游戏")[(goto:"游戏首页")]  </div>
+
+
+:: Untitled Passage {"position":"375,0","size":"100,100"}
+欢迎光临~
+让我们一起学习中文吧！
+今天要学习的内容是〈我要买笔电〉
+先看一下[[课程目标]]吧
+
+本教材内容节选并改编自《时代华语 第二册》(辅仁大学华语文教学中心)，仅供教学与学习使用。
+
+
+:: WorkCulture {"position":"1875,500","size":"100,100"}
+(display:"UI-Nav")
+(set: $goal to "WorkCulture")       <!-- 新增 -->
+(set: $WorkCulture to $WorkCulture + 1)
+良介心想：「原来台湾的公司，现在还会用传真机，我应该多了解一下职场文化。」
+
+[[准备出门->BeforeGoOut]]
+
+
+:: 华语生词配对 {"position":"825,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/matchgame/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
+
+
+:: 口说挑战 {"position":"450,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/sayword/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
+
+
+:: 听音选字 {"position":"325,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/listenwordchooseword/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
+
+
+:: 填字游戏 {"position":"575,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/writeword/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
+
+
+:: 游戏首页 {"position":"650,125","size":"100,100"}
+(display:"UI-Nav")
+
+选一个游戏来玩玩看！
+
+[[随机生词练习]]
+[[华语生词配对]]
+[[生词字谜搜索]]
+[[口说挑战]]
+[[听音选字]]
+[[填字游戏]]
+
+学完生词后，我们来看看课文吧！
+
+[[课文一->Start]]
+[[课文二->Start2]]
+[[课文三->Start3]]
+
+
+:: 生词字谜搜索 {"position":"700,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/searchword/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
+
+
+:: 生词教学 {"position":"675,0","size":"100,100"}
+''生词浏览''
+<div class="grid2">
+(for: each _it, ...$vocab_all)[
+  <div class="card">{(if: _it contains 'img')[
+      <img class="vocab-img" src="(print: _it's 'img')" alt="(print: _it's 'hanzi')">
+    ]}<h3>
+      <span class='hanzi-xl'>(print: _it's 'hanzi')</span>
+      (print: "<span class='hint hint-xl' data-hint='" + (_it's 'pinyin') + "'>ⓘ</span>")
+    </h3>
+    词性：''(print: _it's 'tag')''<br>
+    意思：''(print: _it's 'def')''<br>
+    
+      ]
+      
+[[游戏首页]]
+
+
+:: 课程目标 {"position":"525,0","size":"100,100"}
+{
+(set: $lessonID to "科技产品购买")
+
+(set: $vocab_all to (array:
+(datamap:"hanzi","筆电","pinyin","bǐdiàn","def","laptop; notebook computer","tag","N"),
+(datamap:"hanzi","产品","pinyin","chǎnpǐn","def","product","tag","N"),
+(datamap:"hanzi","平板","pinyin","píngbǎn","def","tablet computer","tag","N"),
+(datamap:"hanzi","差别","pinyin","chābié","def","difference","tag","N"),
+(datamap:"hanzi","说明","pinyin","shuōmíng","def","explain; explanation","tag","V/N"),
+(datamap:"hanzi","功能","pinyin","gōngnéng","def","function; feature","tag","N"),
+(datamap:"hanzi","轻","pinyin","qīng","def","light (in weight)","tag","A"),
+(datamap:"hanzi","出差","pinyin","chūchāi","def","to go on a business trip","tag","V"),
+(datamap:"hanzi","不如","pinyin","bùrú","def","not as good as","tag","V"),
+(datamap:"hanzi","大多数","pinyin","dàduōshù","def","most; majority","tag","Det"),
+(datamap:"hanzi","背包","pinyin","bèibāo","def","backpack","tag","N"),
+(datamap:"hanzi","不管","pinyin","bùguǎn","def","no matter; regardless","tag","Conj"),
+(datamap:"hanzi","跟","pinyin","gēn","def","with; and","tag","Prep"),
+(datamap:"hanzi","好用","pinyin","hǎoyòng","def","easy to use","tag","A"),
+(datamap:"hanzi","新闻","pinyin","xīnwén","def","news","tag","N"),
+(datamap:"hanzi","抱怨","pinyin","bàoyuàn","def","to complain","tag","V"),
+(datamap:"hanzi","电池","pinyin","diànchí","def","battery","tag","N"),
+(datamap:"hanzi","正常","pinyin","zhèngcháng","def","normal","tag","A"),
+(datamap:"hanzi","保证","pinyin","bǎozhèng","def","to guarantee","tag","V"),
+(datamap:"hanzi","修理","pinyin","xiūlǐ","def","to repair","tag","V"),
+(datamap:"hanzi","恐怕","pinyin","kǒngpà","def","I'm afraid that…","tag","Adv"),
+(datamap:"hanzi","改天","pinyin","gǎitiān","def","another day","tag","Adv"),
+(datamap:"hanzi","传真机","pinyin","chuánzhēnjī","def","fax machine","tag","N"),
+(datamap:"hanzi","传真","pinyin","chuánzhēn","def","to fax","tag","V"),
+(datamap:"hanzi","打折","pinyin","dǎzhé","def","to discount","tag","V"),
+(datamap:"hanzi","超过","pinyin","chāoguò","def","to exceed","tag","V"),
+(datamap:"hanzi","把握","pinyin","bǎwò","def","to seize; to grasp (opportunity)","tag","V"),
+(datamap:"hanzi","大约","pinyin","dàyuē","def","approximately","tag","Adv"),
+(datamap:"hanzi","能
+够","pinyin","nénggòu","def","to be able to","tag","V"),
+(datamap:"hanzi","真","pinyin","zhēn","def","really","tag","Adv"),
+(datamap:"hanzi","皮","pinyin","pí","def","leather","tag","N"),
+(datamap:"hanzi","班族","pinyin","shàngbānzú","def","office worker","tag","N"),
+(datamap:"hanzi","保證書","pinyin","bǎozhèngshū","def","warranty card","tag","N")
+))
+
+(set: $vocab_devices to (array:
+(datamap:"hanzi","筆电","pinyin","bǐdiàn","def","laptop","tag","N"),
+(datamap:"hanzi","平板","pinyin","píngbǎn","def","tablet","tag","N"),
+(datamap:"hanzi","产品","pinyin","chǎnpǐn","def","product","tag","N"),
+(datamap:"hanzi","功能","pinyin","gōngnéng","def","function","tag","N"),
+(datamap:"hanzi","电池","pinyin","diànchí","def","battery","tag","N"),
+(datamap:"hanzi","传真机","pinyin","chuánzhēnjī","def","fax machine","tag","N"),
+(datamap:"hanzi","皮","pinyin","pí","def","leather","tag","N"),
+(datamap:"hanzi","保证书","pinyin","bǎozhèngshū","def","warranty card","tag","N")
+))
+
+(set: $vocab_actions to (array:
+(datamap:"hanzi","说明","pinyin","shuōmíng","def","explain","tag","V/N"),
+(datamap:"hanzi","出差","pinyin","chūchāi","def","go on business trip","tag","V"),
+(datamap:"hanzi","抱怨","pinyin","bàoyuàn","def","to complain","tag","V"),
+(datamap:"hanzi","修理","pinyin","xiūlǐ","def","to repair","tag","V"),
+(datamap:"hanzi","传真","pinyin","chuánzhēn","def","to fax","tag","V"),
+(datamap:"hanzi","打折","pinyin","dǎzhé","def","to discount","tag","V"),
+(datamap:"hanzi","超过","pinyin","chāoguò","def","to exceed","tag","V"),
+(datamap:"hanzi","把握","pinyin","bǎowò","def","to seize opportunity","tag","V"),
+(datamap:"hanzi","能
+够","pinyin","nénggòu","def","can; be able to","tag","V")
+))
+
+(set: $vocab_other to (array:
+(datamap:"hanzi","差別","pinyin","chābié","def","difference","tag","N"),
+(datamap:"hanzi","轻","pinyin","qīng","def","light","tag","A"),
+(datamap:"hanzi","不如","pinyin","bùrú","def","not as good as","tag","V"),
+(datamap:"hanzi","大多數","pinyin","dàduōshù","def","most","tag","Det"),
+(datamap:"hanzi","背包","pinyin","bèibāo","def","backpack","tag","N"),
+(datamap:"hanzi","不管","pinyin","bùguǎn","def","regardless","tag","Conj"),
+(datamap:"hanzi","跟","pinyin","gēn","def","with","tag","Prep"),
+(datamap:"hanzi","好用","pinyin","hǎoyòng","def","easy to use","tag","A"),
+(datamap:"hanzi","新闻","pinyin","xīnwén","def","news","tag","N"),
+(datamap:"hanzi","正常","pinyin","zhèngcháng","def","normal","tag","A"),
+(datamap:"hanzi","保证","pinyin","bǎozhèng","def","guarantee","tag","V"),
+(datamap:"hanzi","恐怕","pinyin","kǒngpà","def","perhaps; I'm afraid","tag","Adv"),
+(datamap:"hanzi","改天","pinyin","gǎitiān","def","another day","tag","Adv"),
+(datamap:"hanzi","真","pinyin","zhēn","def","really","tag","Adv"),
+(datamap:"hanzi","上班族","pinyin","shàngbānzú","def","office worker","tag","N")
+))
+
+(set: $textParas to (array:
+"建置中"
+))
+
+(set: $progress to (datamap:"vocab",0,"pattern",0,"text",0,"practice",0))
+(set: $score to (datamap:"vocab",0,"pattern",0,"text",0,"practice",0))
+(set: $seenVocab to (dataset:))
+(set: $wrongBank to (dataset:))
+(set: $notes to "")
+
+}
+学完这课程，希望你能学会：
+
+１．学会各类产品资讯
+２．可以表达自己需要的产品资讯
+
+让我们先从[[生词教学]]开始吧！
+
+
+:: 随机生词练习 {"position":"950,250","size":"100,100"}
+(display:"UI-Nav")
+
+<iframe 
+  src="https://w0982163292-bit.github.io/remebercad/" 
+  width="100%" 
+  height="800" 
+  style="border:1px solid #ccc;">
+</iframe>
